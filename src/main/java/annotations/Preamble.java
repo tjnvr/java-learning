@@ -3,7 +3,7 @@ import java.lang.annotation.*;
 
 @Documented // to make it appear in javadoc
 @interface Preamble {
-    String author = "";
+    String author() default  "";
     String date();
     int currentRevision() default 1;
     String lastModified() default "N/A";

@@ -13,7 +13,7 @@ public class Card {
 
     @Override
     public String toString() {
-        val rankString = switch (rank) {
+        String rankString = switch (rank) {
             case 2, 3, 4, 5, 6, 7, 8, 9, 10 -> String.valueOf(rank);
             case 11 -> "Jack";
             case 12 -> "Queen";
@@ -22,7 +22,7 @@ public class Card {
             default -> throw new IllegalStateException("Unexpected value: " + rank);
         };
 
-        val suiteString = switch (suite) {
+        String suiteString = switch (suite) {
             case 1 -> "Clubs";
             case 2 -> "Diamonds";
             case 3 -> "Hearts";
