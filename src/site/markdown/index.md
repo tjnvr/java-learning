@@ -1,3 +1,1 @@
-# Hello World
-
-This is my first Maven site.
+https://docs.oracle.com/javase/tutorial/java/IandI/QandE/interfaces-questions.html
