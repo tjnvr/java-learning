@@ -10,7 +10,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class MyCharSequenceTest {
 
     @Test
-    void shouldComputeLength() {
+    void shouldGetLength() {
         // given
         val input = RandomStringUtils.randomAlphabetic(ThreadLocalRandom.current().nextInt(1, 100));
         val s = new MyCharSequence(input);
@@ -21,8 +21,25 @@ class MyCharSequenceTest {
 
     @Test
     void shouldGetCharAt() {
+        // given
         val s = new MyCharSequence("aaaaaaba");
+
+        // test
+        val res = s.charAt(6);
+
         // expect
-        assertThat(s.charAt(7)).toString().equals("b");
+        assertThat(res).isEqualTo('b');
+    }
+
+    @Test
+    void shouldGetSubSequenceInReverseOrder() {
+        // given
+        val s = new MyCharSequence("abcdef");
+
+        // test
+        val res = s.subSequence(2, 5);
+
+        // expect
+        assertThat(res.toString()).isEqualTo("edc");
     }
 }

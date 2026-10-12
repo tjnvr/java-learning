@@ -3,10 +3,10 @@ package enums;
 import lombok.val;
 
 public class Card {
-    private Suite suite; // 1 - 4, clubs, diamonds, hearts, spades
-    private int rank; // 2 - 10, J, Q, K, A
+    private Suite suite;
+    private Rank rank;
 
-    public Card(Suite suite, int rank) {
+    public Card(Suite suite, Rank rank) {
         this.suite = suite;
         this.rank = rank;
     }
