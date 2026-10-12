@@ -14,17 +14,11 @@ public class MyCharSequence implements  CharSequence{
 
     @Override
     public char charAt(int index) {
-        if (index >= 0 && index < str.length())
-            return str.charAt(index);
-
-        throw new IndexOutOfBoundsException();
+        return str.charAt(index);
     }
 
     @Override
     public CharSequence subSequence(int start, int end) {
-         if(start >= str.length() || end >= str.length() || start > end)
-            throw new IndexOutOfBoundsException();
-
-         return str.substring(start, end);
+        return new StringBuilder(str.subSequence(start, end)).reverse();
     }
 }
