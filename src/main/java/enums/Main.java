@@ -1,7 +1,5 @@
 package enums;
 
-import classes.Deck;
-
 public class Main {
     public static void main(String[] args) {
         Deck.CARDS.forEach(System.out::println);

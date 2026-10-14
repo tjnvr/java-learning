@@ -4,9 +4,9 @@ import lombok.val;
 
 public class Card {
     private Suite suite;
-    private Rank rank;
+    private int rank;
 
-    public Card(Suite suite, Rank rank) {
+    public Card(Suite suite, int rank) {
         this.suite = suite;
         this.rank = rank;
     }
